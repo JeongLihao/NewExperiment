@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./搜索.css">
+</head>
+
+<body>
+    <div class="mi">
+        <input id="ipt " class="" type="search" placeholder="小米笔记本">
+        <ul class="result-list hide">
+            <li><a href="#">全部商品</a></li>
+            <li><a href="#">小米11</a></li>
+            <li><a href="#">小米10S</a></li>
+            <li><a href="#">小米笔记本</a></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">黑鲨4</a></li>
+            <li><a href="#">空调</a></li>
+        </ul>
+    </div>
+    <script>
+        let inp = document.querySelector('input')
+        let ui = document.querySelector('.result-list')
+        inp.addEventListener('focus', function () {
+            ui.classList.remove('hide')
+            inp.classList.toggle('search')
+        })
+        inp.addEventListener('blur', function () {
+            ui.classList.add('hide')
+            inp.classList.toggle('search')
+        })
+    </script>
+</body>
+
+</html>
