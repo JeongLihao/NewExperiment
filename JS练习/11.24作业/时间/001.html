@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>2000-01-01 00:00</p>
+    <button>校准</button>
+    <script>
+        let p = document.querySelector('p')
+        let button = document.querySelector('button')
+
+        let year
+        let mon 
+        let date1
+        let hour = 0
+        let min = 0
+
+        button.addEventListener('click', function () {
+            setTimeout(function () {
+            let date = new Date()
+            let year = date.getFullYear()
+            let mon = date.getMonth() + 1
+            let date1 = date.getDate()
+            let hour = date.getHours() 
+            let min = date.getMinutes() + 1
+            p.innerText = `${year}-${mon}-${date1} ${hour}:${min}`
+            console.log(`${year}-${mon}-${date1} ${hour}:${min}`);
+        }, 1000)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

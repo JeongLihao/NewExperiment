@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+            * {
+            margin: 0;
+            padding: 0;
+            }
+            .w {
+                width: 1200px;
+                margin: auto;
+            }
+            body {
+                background-color: #f3f5f7;
+            }
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            .clearfix:before,.clearfix:after {
+                content:"";
+                display:table; 
+            }
+            .clearfix:after {
+                clear:both;
+            }
+          
+
+            .box {
+                margin-top: 30px;
+            }
+            .box-hd {
+                height: 45px;
+            }
+            .box-hd h3 {
+                float: left;
+                font-size: 20px;
+                color: #494949;
+            }
+            .box-hd a {
+                float: right;
+                font-size: 12px;
+                color: #a5a5a5;
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+            /* 把li 的父亲ul 修改的足够宽一行能装开5个盒子就不会换行了 */
+            .box-bd ul {
+                width: 1225px;
+            }
+            .box-bd ul li {
+                position: relative;
+                top: 0;
+                float: left;
+                width: 228px;
+                height: 270px;
+                background-color: #fff;
+                margin-right: 15px;
+                margin-bottom: 15px;
+                transition: all .3s;
+            
+            }
+            .box-bd ul li a {
+                display: block;
+            }
+            .box-bd ul li:hover {
+                top: -8px;
+                box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+            }
+            .box-bd ul li img {
+                width: 100%;
+            }
+            .box-bd ul li h4 {
+                margin: 20px 20px 20px 25px;
+                font-size: 14px;
+                color: #050505;
+                font-weight: 400;
+            }
+            .box-bd .info {
+                margin: 0 20px 0 25px;
+                font-size: 12px;
+                color: #999;
+            }
+            .box-bd .info span {
+                color: #ff7c2d;
+            }
+
+    </style>
+</head>
+<body>
+    <script>
+
+        let data = [
+                    {
+                        src: 'images/course01.png',
+                        title: '',
+                        num: 1125
+                    },
+                    {
+                        src: 'images/course02.png',
+                        title: '',
+                        num: 357
+                    },
+                    {
+                        src: 'images/course03.png',
+                        title:'',
+                        num: 22250
+                    },
+                    {
+                        src: 'images/course04.png',
+                        title: '',
+                        num: 389
+                    },
+                    {
+                        src: 'images/course05.png',
+                        title: '',
+                        num: 124
+                    },
+                    {
+                        src: 'images/course06.png',
+                        title: '',
+                        num: 432
+                    },
+                    {
+                        src: 'images/course07.png',
+                        title:'' ,
+                        num: 888
+                    },
+                    {
+                        src: 'images/course08.png',
+                        title: '',
+                        num: 590
+                    },
+                ]
+        
+        document.write(
+            `
+    <div class="box w">
+        <div class="box-hd">
+            <h3>精品推荐</h3>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="box-bd">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img src="${data[0].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="${data[1].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[2].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[3].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[4].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[5].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[6].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="${data[7].src}" alt="">
+                        <h4>
+                            Think PHP 5.0 博客系统实战项目演练
+                        </h4>
+                        <div class="info">
+                            <span>高级</span> • <span>1125</span>人在学习
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+            `
+        )
+    </script>
+</body>
+</html>

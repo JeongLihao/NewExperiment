@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            display: none;
+        }
+        button{
+            background-color: darkcyan;
+            border: none;
+            height: 25px;
+            width: 70px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button>点击有礼</button>
+    <div>
+        5秒后消失<br>
+        广告位招租
+    </div>
+    <script>
+        let bt = document.querySelector('button')
+        let d = document.querySelector('div')
+        bt.addEventListener('click', function () {
+            d.style.display = 'block'
+            setTimeout(function () {
+                d.style.display = 'none'
+            }, 5000)
+        })
+
+    </script>
+</body>
+
+</html>

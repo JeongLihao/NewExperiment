@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 2000px;
+    background-color: #f7a6a6;
+}
+.sou{
+    height: 50px;
+    width: 100%;
+    background-color: #fc8568;
+    margin-top: 300px;
+    opacity: 0;
+}

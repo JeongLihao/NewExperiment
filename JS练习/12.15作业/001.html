@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px black solid;
+
+        }
+        td{
+            border: 1px black  solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+    <table></table>
+    <script>
+        let stu = ['zs', 'ls', 'ww', 'zr']
+        let stus = stu.map(function (item, index) {
+            return `
+                <h2>item</h2>
+            `
+        })
+        let div = document.querySelector('.d1')
+        div.innerHTML = stus.join('')
+        let stut = [
+            {
+                name: 'zs',
+                age: 18
+            },
+            {
+                name: 'ls',
+                age: 19
+            },
+            {
+                name: 'ww',
+                age: 20
+            }
+        ]
+        let stuts = stut.map(function (item, index) {
+            return `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.age}</td>
+                </tr>
+            `
+        })
+        document.querySelector('table').innerHTML = stuts.join('')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/仿新浪.css">
+</head>
+
+<body>
+    <div class="header">我是顶部导航栏</div>
+    <div class="content">
+        <div class="sk">秒杀模块</div>
+    </div>
+    <div class="backtop">
+        <img src="./images/close2.png" alt="">
+        <a href="javascript:;"></a>
+    </div>
+    <script>
+            let he = document.querySelector('.header')
+            window.addEventListener('scroll',function(){
+                let a = document.documentElement.scrollTop
+                console.log(a)
+                if(a<500){
+                    he.style.top = '-500px'
+                }else{
+                    he.style.top = '0'
+                }
+                if(a<80){
+                    he.style.top = '0'
+                }
+            })
+    </script>
+</body>
+
+</html>
